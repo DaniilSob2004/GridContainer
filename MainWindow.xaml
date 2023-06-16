@@ -1,0 +1,47 @@
+﻿<Window x:Class="GridContainer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GridContainer"
+        mc:Ignorable="d"
+        Title="GridContainer" Height="300" Width="700" WindowStartupLocation="CenterScreen" MinWidth="200" MinHeight="150">
+
+    <Grid>
+        <!-- Устанавливаем цвет с помощью LinearGradientBrush -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="DarkRed" Offset="0.2"></GradientStop>
+                <GradientStop Color="Blue" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Настраиваем столбцы и строки -->
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Устанавливаем кнопки -->
+        <Button Background="Blue" Margin="5,6,5,5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Click="Button_Click" Content="Blue"></Button>
+        <Button Background="White" Margin="5,0,5,5" Grid.Row="1" Grid.Column="0" Grid.RowSpan="4" Click="Button_Click" Content="White"></Button>
+        <Button Background="Green" Margin="0,0,5,5" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Click="Button_Click" Content="Green"></Button>
+        <Button Background="Red" Margin="0,0,5,5" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Click="Button_Click" Content="Red"></Button>
+        <Button Background="Orange" Margin="0,0,5,5" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Click="Button_Click" Content="Orange"></Button>
+        <Button Background="LightPink" Margin="0,0,5,5" Grid.Row="3" Grid.Column="1" Click="Button_Click" Content="LightPink"></Button>
+        <Button Background="Gray" Margin="0,0,5,5" Grid.Row="4" Grid.Column="1" Click="Button_Click" Content="Gray"></Button>
+        <Button Background="Yellow" Margin="0,0,5,5" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" Click="Button_Click" Content="Yellow"></Button>
+        <Button Background="HotPink" Margin="0,0,5,5" Grid.Row="3" Grid.Column="3" Click="Button_Click" Content="HotPink"></Button>
+        <Button Background="DarkViolet" Margin="0,0,5,5" Grid.Row="4" Grid.Column="3" Click="Button_Click" Content="DarkViolet"></Button>
+    </Grid>
+
+</Window>
